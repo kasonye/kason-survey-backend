@@ -1,17 +1,13 @@
-package com.asl.intern.survey.po;
+package com.asl.intern.survey.dto;
 
-import javax.persistence.*;
-import java.io.Serializable;
 
-@Entity(name = "admin")
-public class Admin implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+import javax.persistence.Column;
+
+public class AdminDTO {
     private Integer adminId;
-    @Column(name = "username",length = 5,nullable = false)
     private String username;
-    @Column(name = "password",length = 10,nullable = false)
     private String password;
+    private String token;
 
     public Integer getAdminId() {
         return adminId;
@@ -37,12 +33,21 @@ public class Admin implements Serializable {
         this.password = password;
     }
 
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
     @Override
     public String toString() {
-        return "Admin{" +
+        return "AdminDTO{" +
                 "adminId=" + adminId +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
+                ", token='" + token + '\'' +
                 '}';
     }
 }

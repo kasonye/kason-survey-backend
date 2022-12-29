@@ -19,6 +19,6 @@ public class SurveyController {
 
     @GetMapping
     public BaseResponse<List<Survey>> getSurvey(){
-        return new BaseResponse<>(ResultCode.FIND_SUCESS.getCode(),ResultCode.FIND_SUCESS.getMessage(),questionsService.getSurvey());
+        return new BaseResponse<>(ResultCode.FIND_SUCCESS.getCode(),ResultCode.FIND_SUCCESS.getMessage(),questionsService.getSurvey());
     }
 }

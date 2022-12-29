@@ -19,11 +19,11 @@ public class RecordsController {
 
     @PostMapping
     public BaseResponse<RecordsDTO> saveRecords(@RequestBody RecordsDTO recordsDTO){
-        return new BaseResponse<>(ResultCode.FIND_SUCESS.getCode(), ResultCode.FIND_SUCESS.getMessage(),recordsService.saveRecords(recordsDTO));
+        return new BaseResponse<>(ResultCode.FIND_SUCCESS.getCode(), ResultCode.FIND_SUCCESS.getMessage(),recordsService.saveRecords(recordsDTO));
     }
 
     @GetMapping
     public BaseResponse<List<RecordsDTO>> getRecords(){
-        return new BaseResponse<>(ResultCode.FIND_SUCESS.getCode(), ResultCode.FIND_SUCESS.getMessage(),recordsService.getRecords());
+        return new BaseResponse<>(ResultCode.FIND_SUCCESS.getCode(), ResultCode.FIND_SUCCESS.getMessage(),recordsService.getRecords());
     }
 }

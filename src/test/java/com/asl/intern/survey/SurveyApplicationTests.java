@@ -1,6 +1,7 @@
 package com.asl.intern.survey;
 
 import com.asl.intern.survey.po.Options;
+import com.asl.intern.survey.repository.AdminRepository;
 import com.asl.intern.survey.repository.OptionsRepository;
 import com.asl.intern.survey.repository.QuestionsRepository;
 import com.asl.intern.survey.service.OptionsService;
@@ -14,13 +15,13 @@ import java.util.List;
 @SpringBootTest
 class SurveyApplicationTests {
     @Autowired
-    private OptionsService optionsService;
+    private AdminRepository adminRepository;
     @Autowired
     private QuestionsService questionsService;
 
     @Test
     public void getSurvey(){
-        optionsService.deleteOption(13);
+        System.out.println(adminRepository.findByUsername("kason"));
     }
 
 }

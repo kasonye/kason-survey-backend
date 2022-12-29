@@ -7,8 +7,10 @@ public enum ResultCode {
     MODIFIED_FAIL("1101","修改失败！"),
     DELETED_SUCCESS("1200","删除成功！"),
     DELETED_FAIL("1201","删除失败！"),
-    FIND_SUCESS("1300","查询成功！"),
-    FIND_FAIL("1301","查询失败！");
+    FIND_SUCCESS("1300","查询成功！"),
+    FIND_FAIL("1301","查询失败！"),
+    LOGIN_SUCCESS("1400","登录成功"),
+    LOGIN_FAIL("1401","登录失败");
 
     private String code;
     private String message;

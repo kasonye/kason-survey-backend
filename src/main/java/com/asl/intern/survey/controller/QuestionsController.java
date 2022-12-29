@@ -18,7 +18,7 @@ public class QuestionsController {
 
     @GetMapping
     public BaseResponse<List<QuestionsDTO>> getQuestions(){
-        return new BaseResponse<>(ResultCode.FIND_SUCESS.getCode(),ResultCode.FIND_SUCESS.getMessage(),questionsService.getQuestions());
+        return new BaseResponse<>(ResultCode.FIND_SUCCESS.getCode(),ResultCode.FIND_SUCCESS.getMessage(),questionsService.getQuestions());
     }
 
     @PutMapping
@@ -34,7 +34,7 @@ public class QuestionsController {
 
     @GetMapping("{id}")
     public BaseResponse<QuestionsDTO> getQuestionById(@PathVariable("id") int questionId){
-        return new BaseResponse<>(ResultCode.FIND_SUCESS.getCode(), ResultCode.FIND_SUCESS.getMessage(), questionsService.getQuestionById(questionId));
+        return new BaseResponse<>(ResultCode.FIND_SUCCESS.getCode(), ResultCode.FIND_SUCCESS.getMessage(), questionsService.getQuestionById(questionId));
     }
     @PutMapping
     public BaseResponse<QuestionsDTO> updateQuestion(@RequestBody QuestionsDTO questions){
