@@ -5,6 +5,7 @@ public class ServiceException extends Exception {
     private static final long serialVersionUID = 1L;
     private String code;
     private String msg;
+    private Boolean data;
 
     public ServiceException(String code, String msg) {
         this.setCode(code);
@@ -26,4 +27,5 @@ public class ServiceException extends Exception {
     public void setMsg(String msg) {
         this.msg = msg;
     }
+
 }

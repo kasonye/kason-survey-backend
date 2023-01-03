@@ -20,7 +20,7 @@ public class AdminController {
     @Autowired
     private AdminService adminService;
     @PostMapping
-    public BaseResponse<AdminDTO> login(@RequestBody AdminDTO adminDTO)  {
+    public BaseResponse login(@RequestBody AdminDTO adminDTO)  {
 
         AdminDTO admin = adminService.login(adminDTO);
         if (admin==null){

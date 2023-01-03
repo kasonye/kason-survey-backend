@@ -43,12 +43,11 @@ public class JwtUtil implements HandlerInterceptor {
     }
 
     @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws ServiceException {
         String token = request.getHeader("token");
         if(verify(token)){
             return true;
         }else {
-
             return false;
         }
     }
@@ -65,7 +64,7 @@ public class JwtUtil implements HandlerInterceptor {
             throw new ServiceException(ResultCode.LOGIN_SUCCESS.getCode(), ResultCode.LOGIN_SUCCESS.getMessage());
         }
 
-        Map<String, Claim> claims = verify.getClaims();
+//        Map<String, Claim> claims = verify.getClaims();
             return true;
     }
 
